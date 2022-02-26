@@ -1,13 +1,9 @@
 import "./ExpensesList.css";
 import ExpenseItem from "./ExpenseItem";
 const ExpensesList = (props) => {
-  const filterExpense = (list) => {
-    return list.filter((item) => {
-      return item.date.getFullYear().toString() === props.filteredYear;
-    });
-  };
 
-  const result = filterExpense(props.expense);
+
+  const result = props.expense;
   if (result.length === 0) {
     return <h2 className="expenses-list__fallback"> No expenses found.</h2>;
   }
